@@ -1,0 +1,51 @@
+<div class="container">
+  <nav class="sidebar">
+    <img src="../assets/logo.png" alt="Logo VaPo" class="logo">
+    <h2 class="welcome-message">Olá, seja bem-vindo!</h2>
+    <a routerLink="/dashboard">Dashboard</a>
+    <a routerLink="/pesquisa-postos">Pesquisar Postos</a>
+    <a routerLink="/lista-precos">Lista de Preços</a>
+  </nav>
+
+  <main class="main-content">
+    <h1 class="titulo">Lista de Preços</h1>
+    <input type="text" [(ngModel)]="filtro" placeholder="Filtrar por nome do posto..." class="filtro">
+
+    <div class="tabela-wrapper">
+      <table>
+        <thead>
+          <tr>
+            <th>Nome</th>
+            <th>Localização</th>
+            <th>Gasolina</th>
+            <th>Etanol</th>
+            <th>Diesel</th>
+            <th>Data</th>
+            <th>Ativo</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let posto of postosFiltrados">
+            <td>{{ posto.nome }}</td>
+            <td>{{ posto.localizacao }}</td>
+            <td>{{ posto.gasolina }}</td>
+            <td>{{ posto.etanol }}</td>
+            <td>{{ posto.diesel }}</td>
+            <td>{{ posto.data }}</td>
+            <td>{{ posto.ativo ? 'Sim' : 'Não' }}</td>
+            <td>
+              <span [class.status]="true" [class.online]="posto.online" [class.offline]="!posto.online">
+                {{ posto.online ? 'Online' : 'Offline' }}
+              </span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="footer">
+      <h4>Valores de Postos 2025 - VaPo</h4>
+    </div>
+  </main>
+</div>
