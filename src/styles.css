@@ -10,15 +10,13 @@
   overflow: hidden;
   position: relative;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-  background: var(--jelly-bg, linear-gradient(135deg, #00d283, #01a86b)); /* valor padrão */
+  background: var(--jelly-bg, linear-gradient(135deg, #00d283, #01a86b));
 }
 
-/* Variação de cor: primária (verde) */
 .jelly-primary {
   --jelly-bg: linear-gradient(135deg, #00d283, #01a86b);
 }
 
-/* Variação de cor: secundária (roxo/roxo-rosa) */
 .jelly-secondary {
   --jelly-bg: linear-gradient(135deg, #c985f7, #a45de9);
 }
@@ -78,7 +76,7 @@
   white-space: nowrap;
   border-right: 2px solid #000000;
   animation: typing 3s steps(35) infinite alternate;
-  max-width: 35ch; /* trava o crescimento */
+  max-width: 35ch;
 }
 
 @keyframes typing {

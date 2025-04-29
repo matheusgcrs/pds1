@@ -1,13 +1,21 @@
-body, html {
-  height: 100vh;
+html, body {
   margin: 0;
   padding: 0;
-  background-color: #cff6f5; /* tom suave baseado na sua logo */
+  height: 100%;
+  width: 100%;
+  font-family: 'Segoe UI', sans-serif;
+  overflow: hidden;
+}
+
+.login-wrapper {
+  height: 100vh;
+  width: 100vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-family: 'Segoe UI', sans-serif;
+  background-color: #cff6f5;
+  overflow: hidden;
 }
 
 .form-container {
@@ -57,6 +65,7 @@ body, html {
 
 .logo {
   width: 40vh;
+  max-width: 300px;
   margin-bottom: -3vh;
 }
 
@@ -112,4 +121,11 @@ input:focus {
 
 .switch-text a:hover {
   text-decoration: underline;
+}
+
+.footer {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #004d40;
+  text-align: center;
 }

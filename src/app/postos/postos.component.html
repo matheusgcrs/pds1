@@ -1,0 +1,18 @@
+<h2>Lista de Postos</h2>
+
+<input
+  type="text"
+  [(ngModel)]="filtro"
+  placeholder="Filtrar por nome..."
+  class="filtro"
+/>
+
+<ul *ngIf="postosFiltrados.length > 0; else vazio">
+  <li *ngFor="let posto of postosFiltrados">
+    {{ posto.nome }} — {{ posto.localizacao }}
+  </li>
+</ul>
+
+<ng-template #vazio>
+  <p>Nenhum posto encontrado.</p>
+</ng-template>

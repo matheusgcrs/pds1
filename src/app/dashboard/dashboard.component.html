@@ -1,17 +1,23 @@
-<div class="container">
-  <div class="sidebar">
-    <div class="sidebar-top">
-      <img src="assets/logo.png" class="logo" alt="Logo">
-      <h2 class="welcome-message">Olá, seja bem-vindo!</h2>
-      <a routerLink="/dashboard">Dashboard</a>
-      <a routerLink="/pesquisa-postos">Pesquisar Postos</a>
-      <a routerLink="/lista-precos">Lista de Preços</a>
+<div class="dashboard-container">
+  <h1 class="dashboard-title">Visão Geral dos Postos</h1>
+  <h1 class="dashboard-title">Média</h1>
+
+  <div class="resumo-cards">
+    <div class="resumo-card gasolina">
+      <h3>Gasolina</h3>
+      <p>R$ 5,69</p>
+    </div>
+    <div class="resumo-card etanol">
+      <h3>Etanol</h3>
+      <p>R$ 4,39</p>
+    </div>
+    <div class="resumo-card diesel">
+      <h3>Diesel</h3>
+      <p>R$ 6,29</p>
     </div>
   </div>
-  
 
-  <main class="main-content">
-    <router-outlet></router-outlet>
-    <footer class="footer"><h4>Valores de Postos 2025 - VaPo</h4></footer>
-  </main>
+  <div class="espaco-graficos">
+    <p>Aqui você pode colocar gráficos, mapas ou relatórios futuros.</p>
+  </div>
 </div>

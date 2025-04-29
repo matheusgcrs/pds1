@@ -1,12 +1,4 @@
 <div class="container">
-  <nav class="sidebar">
-    <img src="../assets/logo.png" alt="Logo VaPo" class="logo">
-    <h2 class="welcome-message">Olá, seja bem-vindo!</h2>
-    <a routerLink="/dashboard">Dashboard</a>
-    <a routerLink="/pesquisa-postos">Pesquisar Postos</a>
-    <a routerLink="/lista-precos">Lista de Preços</a>
-  </nav>
-
   <main class="main-content">
     <h1 class="titulo">Lista de Preços</h1>
     <input type="text" [(ngModel)]="filtro" placeholder="Filtrar por nome do posto..." class="filtro">
@@ -42,10 +34,6 @@
           </tr>
         </tbody>
       </table>
-    </div>
-
-    <div class="footer">
-      <h4>Valores de Postos 2025 - VaPo</h4>
     </div>
   </main>
 </div>
