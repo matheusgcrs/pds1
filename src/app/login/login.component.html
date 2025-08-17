@@ -24,10 +24,8 @@
       <h2>Cadastro</h2>
 
       <div class="form-fields">
-        <input type="text" placeholder="Nome" />
         <input type="text" placeholder="Usuário" />
         <input type="password" placeholder="Senha" />
-        <input type="date" placeholder="Data de nascimento" />
         <input type="email" placeholder="E-mail" />
         <button class="jelly-button jelly-secondary" (click)="cadastrar()">
           <span class="char" *ngFor="let c of cadastrarLabel; let i = index" [style.--i]="i + 1">{{ c }}</span>
